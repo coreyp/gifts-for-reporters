@@ -2,7 +2,7 @@
 /*
 Quick PHP Gift Registry 
 AKA DirtyGiftReg
-https://github.com/this-is-ari/php-gift-registry
+https://github.com/this-is-ari/php-wedding-gift-registry
 
 A very simple "mock" gift registry, which enables the collection of paypal payments intead of actual gifts.
 
