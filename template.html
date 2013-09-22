@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<HTML lang="en">
+	<HEAD>
+		<meta charset="utf-8">
+		<meta name="description" content="Our registry">
+    	<meta name="author" content="">
+		<TITLE>Our wedding registry</TITLE>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+	</HEAD>
+
+	<BODY>
+
+	   <!-- Static navbar -->
+	    <div class="navbar navbar-default navbar-static-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">Our Wedding Registry</a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="#">Home</a></li>
+	            <li><a href="#about">About</a></li>
+	            <li><a href="#registry">Registry</a></li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+	    <div class="container">
+
+	      <!-- Main jumbotron for a primary marketing message or call to action -->
+	      <div class="jumbotron" id="about">
+	      	<div class="row">
+		      	<div class="col-md-6 text-center">
+		      		<img src="./images/couple.jpg" alt="see footer for image copyright notice">
+		      	</div>
+		      	<div class="col-md-6">
+			        <h1>Jane & Joe's Wedding Registry</h1>
+			        <p>We are so excited to get married and share this joyous event with you! Rather than register at multiple stores, we've setup this website to make it easy and simple for our guests to view our full registry. We don't expect gifts from any of you (your presence at our wedding is enough of a gift!) - but if you feel you would like to give, it would mean alot to us if you could select something from the registry below, as we really have everything else we need.</p>
+			        <p>Looking forward to dancing up a storm with you at the wedding!</p>
+					<p>Lots of love</p>
+					<p>Joe & Jane</p>
+				</div>
+			</div>
+	      </div>
+
+	      <div class="row" id="registry">
+	      	{gifts}
+	      	<!-- MODAL -->
+			<div class="modal fade" id="{id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			          <h4 class="modal-title">{title}</h4>
+			          <h3>{price}</h3>
+			        </div>
+			        <div class="modal-body">
+			          <img src="./images/{image}" alt="{title}">
+			          <p>{description}</p>
+			        </div>
+			        <div class="modal-footer">
+			          {paypal}
+			        </div>
+			      </div><!-- /.modal-content -->
+			    </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+
+            <div class="col-6 col-sm-6 col-lg-3 row text-center">
+              <h3>{title}</h3>
+              <img src="./images/{image}" width="25%" height="25%" data-toggle="modal" data-target="#{id}">
+              <h2>{price}</h2>
+              <button type="button" data-toggle="modal" class="btn-primary" data-target="#{id}">Purchase item</button>
+            </div><!--/span-->
+            {/gifts}
+          </div>
+
+          <hr>
+		   <div class="well">
+		        <p>Looking forward to seeing you at the wedding!</p>
+		        <p><a href="http://www.flickr.com/photos/fixersphotos/3750581705/sizes/m/in/photolist-6HqHgP-6HuL9S-6HPxbo-6JGZV9-6NWbhX-6VEPk6-6VJQ57-6VJRiW-6VJURE-6VJVnh-798Ucf-7aj8y1-7nSrYK-ceCeqS-atHcjy-ek6NHe-9Nw3Uq-8vdAy4-ctSLWL-8h69ud-ev47rH-9FTdbC-ebZAJE-a9mzjm-cVC9Yd-bkLCWM-9dM8DV-ebyeUr-e1xg6t-em8JDN-cRFebu-7zMT9J-dpxDbH-aqnQD4-ezMcHc-91FFCX-9DoLbW-ctgonw-7F6mTU-973QBU-afzMUt-8RLkEA-fjffAg-egbU3M-81CTrG-c8TMyw-8FAvTh-chVQCb-8W9j4u-8tCJkE-choGbo/">Image of couple</a> provided by flickr user thefixer under a <a href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution Licence</a></p>
+		    </div>
+		</div>
+
+	    </div> <!-- /container -->
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	</BODY>
+</HTML>
