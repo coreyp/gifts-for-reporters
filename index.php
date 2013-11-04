@@ -144,8 +144,8 @@ switch (addslashes($_GET['q'])) {
 
 			 			$paypalButton = '<form action="https://www.paypal.com/cgi-bin/webscr" class="pull-right" method="post" target="_top">
 			 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			 			 				<a href="mailto:admin@newoldmedia.net?subject='.$gift[1].'" class="btn btn-info">Volunteer</a>
-			 			 				<button type="submit" class="btn btn-primary" name="submit" >Donate</button>
+			 			 				<a href="mailto:admin@newoldmedia.net?subject='.$gift[1].'" class="btn btn-info">Give Time</a>
+			 			 				<button type="submit" class="btn btn-primary" name="submit" >Give Money</button>
 										<input type="hidden" name="cmd" value="_xclick">
 										<input type="hidden" name="business" value="'.$paypal["email"].'">
 										<input type="hidden" name="lc" value="'.$paypal["country"].'">
