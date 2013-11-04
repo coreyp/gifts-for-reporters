@@ -144,6 +144,7 @@ switch (addslashes($_GET['q'])) {
 
 			 			$paypalButton = '<form action="https://www.paypal.com/cgi-bin/webscr" class="pull-right" method="post" target="_top">
 			 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			 			 				<a href="mailto:admin@newoldmedia.net?subject='.$gift[1].'" class="btn btn-info">Volunteer</a>
 			 			 				<button type="submit" class="btn btn-primary" name="submit" >Donate</button>
 										<input type="hidden" name="cmd" value="_xclick">
 										<input type="hidden" name="business" value="'.$paypal["email"].'">
@@ -163,7 +164,6 @@ switch (addslashes($_GET['q'])) {
 										<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_SM.gif:NonHosted">
 										<input type="hidden" name="notify_url" value='.$_SERVER['REQUEST_URI'].'?q=PayPal_IPN">
 										<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-										<a href="mailto:admin@newoldmedia.net?subject='.$gift[0].'" class="btn btn-info">Volunteer <i class="icon-white icon-envelope"></i></a>
 										</form>';
 						array_push($gift,$paypalButton);
 			 			$giftHtml = $giftTemplate;
