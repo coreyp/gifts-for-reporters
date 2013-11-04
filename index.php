@@ -163,7 +163,7 @@ switch (addslashes($_GET['q'])) {
 										<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_SM.gif:NonHosted">
 										<input type="hidden" name="notify_url" value='.$_SERVER['REQUEST_URI'].'?q=PayPal_IPN">
 										<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-										<button type="submit" class="btn btn-primary" name="submit" >Volunteer</button>
+										<a href="mailto:admin@newoldmedia.net?subject='.$gift[0].'" class="btn btn-info">Volunteer <i class="icon-white icon-envelope"></i></a>
 										</form>';
 						array_push($gift,$paypalButton);
 			 			$giftHtml = $giftTemplate;
