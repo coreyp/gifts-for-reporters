@@ -70,7 +70,7 @@ $giftsUrls = file($giftFilename);
 
 
 // If the gift file has been updated
-if ($giftsUrls[0][0] !== '#') {
+/* if ($giftsUrls[0][0] !== '#') {
 	$row = 1;
 	$productData = NULL;
 
@@ -125,7 +125,7 @@ if ($giftsUrls[0][0] !== '#') {
 	  array_unshift($giftsUrls, "#DELETE THIS LINE AND RE-SAVE TO UPDATE GIFT LIST"."\r\n");
 	  file_put_contents($giftFilename, $giftsUrls);
 	  file_put_contents($flatFilename, $giftsData);
-}
+} *//
 
 echo $header;
 
